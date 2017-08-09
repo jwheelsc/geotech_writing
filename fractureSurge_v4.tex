@@ -1,0 +1,954 @@
+%% 11/23/2015
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGUJournalTemplate.tex: this template file is for articles formatted with LaTeX
+%
+% This file includes commands and instructions
+% given in the order necessary to produce a final output that will
+% satisfy AGU requirements. 
+%
+% You may copy this file and give it your
+% article name, and enter your text.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PLEASE DO NOT USE YOUR OWN MACROS
+% DO NOT USE \newcommand, \renewcommand, or \def, etc.
+%
+% FOR FIGURES, DO NOT USE \psfrag or \subfigure.
+% DO NOT USE \psfrag or \subfigure commands.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Step 1: Set the \documentclass
+%
+% There are two options for article format:
+%
+% 1) PLEASE USE THE DRAFT OPTION TO SUBMIT YOUR PAPERS.
+% The draft option produces double spaced output.
+% 
+% 2) numberline will give you line numbers.
+
+%% To submit your paper:
+\documentclass[draft,linenumbers]{agujournal}
+%\draftfalse
+
+%% For final version.
+% \documentclass{agujournal}
+
+% Now, type in the journal name: \journalname{<Journal Name>}
+
+% ie, \journalname{Journal of Geophysical Research}
+%% Choose from this list of Journals:
+%
+% JGR-Atmospheres
+% JGR-Biogeosciences
+% JGR-Earth Surface
+% JGR-Oceans
+% JGR-Planets
+% JGR-Solid Earth
+% JGR-Space Physics
+% Global Biochemical Cycles
+% Geophysical Research Letters
+% Paleoceanography
+% Radio Science
+% Reviews of Geophysics
+% Tectonics
+% Space Weather
+% Water Resource Research
+% Geochemistry, Geophysics, Geosystems
+% Journal of Advances in Modeling Earth Systems (JAMES)
+% Earth's Future
+% Earth and Space Science
+%
+%
+
+\journalname{JGR-Earth Surface}
+
+
+\begin{document}
+
+%% ------------------------------------------------------------------------ %%
+%  Title
+% 
+% (A title should be specific, informative, and brief. Use
+% abbreviations only if they are defined in the abstract. Titles that
+% start with general keywords then specific terms are optimized in
+% searches)
+%
+%% ------------------------------------------------------------------------ %%
+
+% Example: \title{This is a test title}
+
+\title{Bedrock characteristics of surge-type glaciers and a hypothesis for basal drag during quiescence}
+\title{Influence of bedrock discontinuities on the presence of surge-type glaciers}
+\title{Bedrock fracture characteristics as a control on clast production, basal drag and the underlying cause of surge-type glaciers}
+
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  AUTHORS AND AFFILIATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Authors are individuals who have significantly contributed to the
+% research and preparation of the article. Group authors are allowed, if
+% each author in the group is separately identified in an appendix.)
+
+% List authors by first name or initial followed by last name and
+% separated by commas. Use \affil{} to number affiliations, and
+% \thanks{} for author notes.  
+% Additional author notes should be indicated with \thanks{} (for
+% example, for current addresses). 
+
+% Example: \authors{A. B. Author\affil{1}\thanks{Current address, Antartica}, B. C. Author\affil{2,3}, and D. E.
+% Author\affil{3,4}\thanks{Also funded by Monsanto.}}
+
+\authors{Jeff W. Crompton \affil{1}, Gwenn E. Flowers \affil{1}, Doug Stead \affil{1}}
+
+
+% \affiliation{1}{First Affiliation}
+% \affiliation{2}{Second Affiliation}
+% \affiliation{3}{Third Affiliation}
+% \affiliation{4}{Fourth Affiliation}
+
+\affiliation{1}{Department of Earth Sciences, Simon Fraser University, Burnaby, British Columbia, Canada}
+%(repeat as many times as is necessary)
+
+%% Corresponding Author:
+% Corresponding author mailing address and e-mail address:
+
+% (include name and email addresses of the corresponding author.  More
+% than one corresponding author is allowed in this LaTeX file and for
+% publication; but only one corresponding author is allowed in our
+% editorial system.)  
+
+% Example: \correspondingauthor{First and Last Name}{email@address.edu}
+
+\correspondingauthor{J.W. Crompton}{jcrompto@sfu.ca}
+
+%% Keypoints, final entry on title page.
+
+% Example: 
+% \begin{keypoints}
+% \item	List up to three key points (at least one is required)
+% \item	Key Points summarize the main points and conclusions of the article
+% \item	Each must be 100 characters or less with no special characters or punctuation 
+% \end{keypoints}
+
+%  List up to three key points (at least one is required)
+%  Key Points summarize the main points and conclusions of the article
+%  Each must be 100 characters or less with no special characters or punctuation 
+
+\begin{keypoints}
+\item Discontinuity properties of bedrock are quantified at 8 surge-type and 8 normal glaciers
+\item Surge-type glaciers are underlain by less fractured bedrock than non-surge type glaciers in our field area
+\item We hypothesize that the extent of fracturing controls a zone of high basal drag during quiescence
+\end{keypoints}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  ABSTRACT
+%
+% A good abstract will begin with a short description of the problem
+% being addressed, briefly describe the new data or analyses, then
+% briefly states the main conclusion(s) and how they are supported and
+% uncertainties. 
+%% ------------------------------------------------------------------------ %%
+
+%% \begin{abstract} starts the second page 
+
+\begin{abstract}
+Glacier surges result in dramatic speed up events that can last for years before being truncated by much longer periods of quiescence. While the processes accompanying surge events are well documented, an understanding of the geographical distribution and hence the underlying cause of glacier surges remains elusive. In this paper we explore the hypothesis that the distribution of surges is controlled by geotechnical properties of the bedrock. We carry out a bedrock discontinuity analysis of outcrops bordering eight surge-type and eight non-surge type glaciers in the northern St. Elias Mountains. We find the unexpected result that the surge-type glaciers are associated with bedrock that is less fractured than that of non-surge type glaciers. We explore various mechanistic links relating the extent of bedrock fracturing to glacier dynamics. We hypothesis that the excessive resistance to basal motion during quiescence arises from a clast-rich till-transition zone. We suggest that the extent and location of this zone are critical for determining the outcome of glacier-type (surge-type v. normal) and are a function of the clast production rate, which is itself controlled by the frequency of discontinuities in the bedrock. 
+
+\end{abstract}
+
+\section{Introduction}
+
+Changes in the resistance at the base of a glacier can give rise to dynamic glacier motion, leading to glacier surging \citep{Meier1969}, stick-slip motion \citep[e.g][]{Bindschadler2003} and ice streaming \citep[e.g.][]{Alley1987}. The interaction between a subglacial till layer (soft bed) and the hydraulic drainage system is key in facilitating these active events \citep[e.g.][]{Harrison2003,Tulaczyk2000a}. While extensive research has focused on differentiating the dynamics of ice-bedrock versus ice-till interactions, we have little understanding of how bedrock characteristics control bed-type, and thus glacier dynamics. Attempts to understand the relationship between bed conditions and the geological substrate can be carried out on deglaciated landscapes \citep[e.g.][]{Gordon1981,Hooyer2012} but there remains a gap in our understanding of the relationship between bedrock characteristics and glacier dynamics. Here we explore this relationship by focusing on glacier surges as a dynamic end-member of valley glacier systems. 
+
+Surge-type glaciers are characterized by dramatic oscillations in ice velocity between a relatively slow flowing and long lasting quiescent phase, and a relatively abrupt fast flowing surge phase \citep{Meier1969}. The contrast in timing and velocity between the two modes depends largely on the style of surge \citep[e.g.][]{Murray2003}, but in general, the surge velocity can be orders of magnitude above quiescence, while surge duration is generally an order of magnitude less than the decadal timescales of quiescence. Surge-type glaciers are not found in all glacierized regions, and in the mountain ranges where they occur not all glaciers surge. Surge events are triggered or accompanied by pervasively high water pressures at the bed \citep{Kamb1985}, but the underlying cause of surge-type glaciers and an explanation for their seemingly non-random geographical distribution remains elusive \citep{Harrison2003}. Recent progress has shown that glacier surges are most probable within an optimal temperature$\--$precipitation window \citep{Sevestre2015}, suggesting that a sufficiently negative mass balance can preclude a surge \citep[e.g.][]{Dowdeswell1995,Kienholz2016}. However, the mass balance alone cannot explain the internal dynamics of a glacier that lead to unstable flow. Researchers therefore focus on the glacier geometry, bedrock lithology, basal characteristics and the thermal structure of surging glaciers \citep[e.g.][]{Clarke1984,Clarke1986,Hamilton1996,Sharp1994}. 
+
+Large scale statistical analyses have repeatedly found that surge-type glaciers are correlated with glacier length, area and slope \citep[e.g.][]{Clarke1986,Hamilton1996,Jiskoot1998,Sevestre2015}, with a relationship between bedrock lithology and glacier surging being documented only in Svalbard \citep[e.g.][]{Hamilton1996,Jiskoot1998}. Our recent work shows  a correlation between surging and the grain size distribution of proglacially suspended river sediments \citep{Crompton2016}, thereby hinting at geological variables associated with surge-type glaciers that may not be detectable at the scale of a geologic map. \cite{Post1969} also suggested that surging glaciers occur in proximity to fault shattered valleys, but to date there have been no quantitative attempts to study the relationship between bedrock quality and the occurrence of glacier surges. In this study we investigate the relationship between bedrock discontinuity properties and glacier dynamics by quantifying discontinuity properties at an outcrop scale for eight surge-type and eight non-surge type glaciers within a $\rm 50\,km^2$ area of the St. Elias Mountains, Yukon, Canada. Macroscopic discontinuities can be assessed through various geometric properties such as aerial fracture density and linear fracture intensity \citep{Priest2012}, which we quantify through a 2D image analysis of the photographed outcrops. In the discussion, we speculate on the cause of bedrock discontinuities in our field area, and hypothesize a link between bed-type and surge-type glaciers based on the extent of discontinuities in the bedrock.   
+
+
+% Here is a portion of a lit review that can be incorporated in the intro, or perhaps contians neglected material that should be in the discussion.
+%\begin{enumerate}
+%\item{\cite{Lukas2013} lithology has an important influence on clast shape. An analysis of clast shape in high mountain environments has shown that when platy clasts go in, they come out platy, but only more rounded, whereas in lesser mountain ranges there is a large differentiation between input (supra and extraglacial) clasts and output (subglacial and fluvial). The reasons for different lithology responses could be joint density (jad and sitharam 2003), hardness (augustinus,1991, aydin and basu, 2005), cleavage and foliation (hall, 1987). but this paper found little variation in the initial clast form regardless of litholgy. joint spacing is most important for clast size. Drake (1970), follwing Sneed and Folk (1958) says there might be an equilibrium between abrasion and plucking, but that might depend on lithology. IN this paper they postulate relationships based on rock anisotropy and hardness for how a clast will evolve. What ultimately defines a rock are it's physical properties, not lithological name.  }
+%\item{erosion rate as a function of lithology. Granite and metamorphic to volcanic then mudstone in decreasing order of K (erodibility paramter) \cite{Stock1999}.  }
+%\item{erosion rate scales inversely with the square of the tensile strength of the rock \citep{Sklar2001}.}
+%\item{\cite{Clapperton1975} says that surge-type glaciers in Svalbard and Iceland have debris rich basal ice near the terminus, which could be a function of the glacier dynamics during a surge related to regelation freeze on that does get prssure melted again because obstacles get drowned out by high basal water pressure. \cite{Metcalf1979} speculates that the sliding speed slow down of surge might have to due with a decrease in velocity due to abrasion that increases as more ice gets debris rich}
+%\item{Lovenbreen had a much lower hydraulic conductivity than Bakaninbreen, despite them thinking lovenbreen was more coarse in clasts. They nelieve sediment under bakinanbreen was dilated, and therefore has high conductivity. They also believe that maybe lovenbreen was frozen to the bed, which does seem ploausible for only a 5 k glacier to be 180 meters thick. Kulessa 2003}
+%\item{There's generally a massive release of sediment at the end of a glacier surge (Humphrey andRaymond, 1994; Jaeger and Nittrouer, 1999;Fleisher et al., 2003).)}
+%\end{enumerate}
+
+\section{Field site}
+
+\subsection{Regional Geology}
+
+Our field area is within the St. Elias Mountains of the southwest Yukon, where dramatic topographic prominence creates an active interplay between climate, tectonics and glaciation \citep[e.g.][]{Theberge1980}. Present day tectonic forces are driven by convergence of the Yakutat microplate at roughly $\rm 50\,mm\,yr^{-1}$ \citep[e.g.][]{Plafker1978,Fletcher2003,Elliott2013}. Most of the deformation is accommodated by shortening of the Yakutat, Prince William and Chugach terranes to the south of our field area \citep[e.g.][]{Worthington2008,Fletcher2003,Marechal2015}, and an inland transfer of stress along the presently active southern Denali and Duke River strike-slip faults to the north \citep[e.g.][]{Cobbett2016,Marechal2015}. As a result, uplift rates within the Alexander terrane, which encompasses our field area, are relatively stagnant \citep[e.g.][]{Berger2008,Dodds1988,Enkelmann2017} in comparison to the rapid exhumation rates of $\rm 1 - 4\,mm\,yr^{-1}$ in the Southern St. Elias Mountains \citep[e.g.][]{Berger2008,Enkelmann2008,OSullivan1997}. Exhumation is thought to be correlated with a large decreasing precipitation gradient inward of the range \citep[e.g.][]{Berger2008}, but the underlying geology seems to play a more fundamental role \citep{Enkelmann2017}.
+
+Rocks within the Alexander terrane were subject to two major phases of ductile deformation between the mid-Paleozoic and pre-Cenezoic \citep[e.g.][]{Campbell1978,Israel2007,Cobbett2016}. Brittle deformation did not occur until a post Miocene ($\sim 5.1$ Ma) deformation event that gave rapid rise to the St. Elias Mountains \citep[e.g.][]{Eisbacher1977,Cobbett2016}, which is coincident with the onset of glaciation. We sampled 16 glaciers that were either underlain solely by Paleozoic metasedimentary rocks, or by a combination of late Jurassic to early Cretaceous felsic plutonic rocks at higher elevation, with metasedimentary rocks at lower elevation (see \cite{Crompton2016} for a more thorough description of rock types). 
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim=0cm 18cm 0cm 0cm, clip=true,width =1\textwidth]{figures/geologyMap_wide_c.pdf}
+  \caption[]{Map of field area within Donjek Range and Maxwell Group of the St. Elias Mountains. Bedrock geology compiled by \cite{Gordey1999}. The long edge of the green and yellow symbols show the approximate photograph locations and orientations. Small circles show the surge index from \cite{Clarke1986}. Glaciers in our study set with a surge index greater than 3 are known to be surge-type.}
+\label{map}
+\end{figure}
+
+\subsection{Study Glaciers}
+
+Glacier mass loss in the St. Elias Mountains is currently amongst the highest in the world, with mass loss rates estimated to be $\rm 0.47\pm0.09\,mm\,yr^{-1}$ \citep{Etienne2010} and $\rm0.78\pm0.34\,mm\,yr^{-1}$ \citep{Barrand2010} water equivalent for a period of roughly five decades leading up to the late 2000's. These high mass loss rates contribute roughly half of the Alaska/Yukon budget of $\rm -50\pm17\,Gt\,yr^{-1}$ of ice mass loss estimated between 2003$-$2009 \citep{Gardner2013}, with future projections showing that the St. Elias Mountains will continue to be a leading contributor to sea level rise over the next century \citep{Radic2011}. The largest glaciers in the St. Elias Mountains are most often surge-type \citep{Clarke1986}, so to fully characterize ice mass loss in the St. Elias requires a more thorough understanding of glacier-surges. Furthermore, a strong negative mass balance should provide context for a possible transition in glacier dynamics from surge-type to normal behavior. 
+
+We sample glacier catchments in the Donjek Range and Maxwell Group, which are immediately to the north and south of the Kaskawulsh Glacier, respectively (Fig. \ref{map}). Glaciers in this area experience a subarctic climate \citep{MacDougall2011}. We investigate eight surge-type (S) and eight non-surge type (NS) glaciers that are labeled with numbers between 1--20 to be consistent with previous work \citep{Crompton2016}. Glaciers 1 (S) and 2 (NS) have previously been the site of extensive work \citep[e.g.][]{MacDougall2011,Wilson2013}. They have a similar equilibrium line altitude ($\rm \sim 2550\,m$) and thermal structure whereby temperate ice at higher elevation grades into cold ice in the ablation zone \citep{Wilson2013}. From modelling work done by \citet{Wilson2013a}, we expect a similar glacier thermal structure throughout the study area. We assign glacier-type (S vs. NS) based on the work of \cite{Clarke1986}, field evidence of surge characteristics, and areal and satellite imagery (see \cite{Crompton2016} for a more thorough description of glacier classification). 
+
+
+%We define three groups within our data based on (1) glacier catchment lithology as metasedimentary (MS) or mixed (MX), (2) outcrop rock type as felsic plutonic (P) or metasedimentary (MS) and (3) by glacier-type as surge-type (S) or non-surge type (NS). The resulting six groups are labeled following the order of ``basin lithology (outcrop rock type) - glacier type", as: MS-S, MS-NS, MX(P)-S, MX(MS)-S, MX(P)-NS and MX(MS)-NS. 
+
+\section{Methods}
+
+\subsection{Data collection}
+
+We mapped the discontinuity properties at one bedrock outcrop for each catchment. We selected the outcrops based on a qualitative assessment of the outcrop representativeness, aerial extent and proximity to the ice margin, which were assessed during a helicopter flight around each catchment (see Fig. \ref{map} for sample locations). Glacier 1 was an exception in that a longer field campaign permitted us to characterize the spatial variability in fracture characteristics based on detailed mapping of three outcrops. We were also able to sample two outcrops at Glacier 13. There was a wide range of bedrock damage throughout the catchments, but from aerial imagery we estimate that the catchments ranged from a $\sim$90/10 to a $\sim$60/40 ratio of talus cover to bedrock exposure. Of the exposed bedrock, only a small portion of the outcrops were accessible for sampling. 
+
+Based on a visual estimate of the fracture spacing and our ability to access the bedrock outcrop, photos were taken at a distance of roughly 10\,m with an 18\,mm focal length, or at a distance of roughly 200\,m with a 200\,mm focal length. Photos were taken with a Canon EOS 60D camera. Photos taken at the $\rm \sim$10\,m distance were calibrated using two scale balls that were placed on the wall. Where possible, images were taken roughly perpendicular to the wall to avoid length distortion \citep{Priest2012}. We note that a perpendicular orientation may not always be the best choice due to occlusion of discontinuities behind outcrop protrusions \citep[e.g.][]{Sturzenegger2009}. Scales for photographs taken at the $\sim$200\,m distance were estimated by constructing a 3D model of the outcrop using the open-source structure-from-motion software \emph{vSFM} \citep{Wu2011}. Photos were collected from up to six camera stations per outcrop, and at each station the entire outcrop was imaged with $\sim$10\% overlap between photographs (blue boxes in Fig. \ref{pg}). Distances between camera stations (dashed black lines in Fig. \ref{pg}) were obtained by differencing the coordinates that were determined from a Magellan handheld GPS, or through the use of a tape measure. We scaled the 3D SFM model in Matlab using a scale factor that was computed from the ratio of the modelled versus true camera spacings averaged over all possible combinations of camera spacings. To estimate the average 2D image resolution in pixels per meter for a given image, a second scale factor was computed by using up to five points common to the 2D image (green lines in Fig. \ref{pg}) and 3D model (yellow lines in Fig. \ref{pg}), thereby creating up to 15 distance combinations (Fig. \ref{pg}). Numerous photos were taken at each outcrop, so only the most representative photo from all camera stations was used to trace discontinuities.
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim=0cm 2cm 0cm 0cm, clip=true,width =0.8\textwidth]{figures/GL1PG1_INKSCAPE_c}
+  \caption[]{Example of survey carried out at a Glacier 1 outcrop where the 3D model was built from three camera stations. The blue and purple dashed box delineates the perimeter of the image sequences used to construct the 3D model in \emph{v}SFM (top panel). The model is scaled using the mean of the true (dashed black lines) versus modelled camera spacings. Only one image from one station is used to trace the discontinuities, and in this case only a portion of the photograph was used for the sampling window (dashed orange and red line). The blue lines show the extent of individual images with $\sim$10\% overlap, and the red lines show the $\rm 2\,m^2$ sub-windows in which the discontinuities were traced. The 2D image was scaled using points common to the photograph (green points and lines) and the 3D model (yellow points and lines), and labeled 2-9 to indicate station 2 image 9.}
+\label{pg}
+\end{figure}
+
+\subsection{Analysis}
+
+We analyze the discontinuities properties within a rectangular window (orange and red dashed box in Fig. \ref{pg}). The sampling window usually takes up only a portion of the entire photograph (blue boxes in Fig. \ref{pg}). With the exception of the small outcrop size at Glacier 2, the window size is selected so that each side of the window intersects between 30 and 100 traces \citep{Priest2012}. For a more detailed view of the outcrop, we zoom into 2\,$\rm m^{2}$ sub-windows within the sampling window (red boxes in Fig. \ref{pg}) to trace the discontinuities. The discontinuities area traced manually using the Matlab \textbf{imfreehand} tool, with examples of traces shown in black in Fig. \ref{fp}\,a, and in red in Fig. \ref{oc}. 
+%We find that equally sized sub-windows provides more consistency than setting the sub-window size on the basis of image resolution. 
+All traces are tagged so that they can be concatenated across sub-windows.
+
+Using the digital traces we analyze standard metrics of geometrical discontinuity properties \citep[e.g.][]{Priest2012}, including the distribution statistics of trace lengths (Fig. \ref{fp}\,d), the total trace length per unit area (aerial intensity, $\rm{P_{21}\,[m/m^{-2}}]$), the number of traces per unit area (aerial density, $\rm{P_{20}\,[m^{-2}}]$), the linear frequency of traces (linear intensity, $\rm{P_{10}\,[m^{-1}}]$, Fig. \ref{fp}\,b and c), the number of trace intersections per unit area (aerial intersection density, $\rm{I_{20}\,[m^{-2}]}$, Fig. \ref{fp}\,a), and the percent of traces intersecting each window edge. We also explore a mix of established and new methods for analyzing the 2D block shapes formed by intersecting traces. Analysis was automated by scripting a purpose built Matlab program to compute all metrics. Other such programs to analyse digital traces have also become freely available \citep[e.g.][]{Healy2017}. All code described herein can be downloaded from \verb+https://github.com/jwheelsc/discontinuities_2D+. 
+
+The $\rm{I_{20}}$ is computed by identifying the intersection points between line segments for all possible pairs of traces within the window, and normalizing the number of intersection points by the total window area. The $\rm{P_{10}}$ is computed by measuring the distance between adjacent traces along a scanline. Each sampling window is populated with 40 scanlines of the same orientation and spacing, and the frequency is averaged over all scanlines. We use 40 scanlines per window because we find that the mean frequency changes by less than 1\% beyond 40 scanlines for the most sparsely populated windows. For each window we compute the frequency at 5$^{\circ}$ increments of scanline angle from $0\--180^{\circ}$, allowing us to compute a minimum, maximum and mean trace frequency as a function of the scanline angle (Fig. \ref{fp}\,c). The resulting scanline angle-frequency curve allows us to compute various scale-independent metrics of 2D block shape, including the ratio of maximum to minimum frequency (RMMF), the block aspect ratio (BAR) and the ratio of set spacing (RSS). The RSS and AR are more physically tractable metrics of block shape, but require knowledge of the angles between intersecting traces. For the AR, we compute a mean intersection angle by fitting a line to each intersecting trace using 10 points on either side of the intersection. For the RSS, we assume that the network of fractures can be represented by two underlying sets, and we find the mean intersection angle that best fits the scanline angle--frequency curve to a modelled distribution \citep[e.g.][]{Hudson1979}. Both methods for determining the intersection angle result in high uncertainty. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim=0cm 12cm 0cm 0cm, clip=true,width =1\textwidth]{figures/fourPlot.pdf}
+  \caption[]{Traces of discontinuities within the sampling window of the outcrop at Glacier 7 showing a) intersection points and examples of scanlines for 15$^{\circ}$ and 105$^{\circ}$ with the corresponding trace spacing frequency in b). The number of scanlines in a) is reduced from 40 lines per scanline angle for clarity. Panel c) shows the mean frequency ($\rm P_{10}$) as a function of the scanline angle with the dashed line showing the $\rm P_{10}$ averaged over all scanline angles. Panel d) shows the probability distribution of the trace length with negative exponential and lognormal fits, the median and the mean. }
+\label{fp}
+\end{figure}
+
+
+\subsection{Uncertainty}
+
+Uncertainty in our analysis stems from the image resolution ($\rm \delta_1$), computing a scale from the 3D models ($\rm \delta_2$), the variability in metrics that arise from differences in manually traced discontinuities ($\rm \delta_3$), the orientation of joints relative to the outcrop surface and camera orientation ($\rm \delta_4$) and the variability in the fracture properties within a given basin ($\rm \delta_5$). 
+
+To address $\rm \delta_1$, we decrease the image resolution of two photographs and retrace the discontinuities. We also search for correlations between any of the discontinuity properties and the image resolution. To address 3D scale uncertainty ($\rm \delta_2$), we select a Glacier 1 outcrop to define eight length segments ranging from 1--8 m that could be identified in both a scaled 2D image and from a 3D model generated from a wall-to-camera distance of $\sim$200\,m, and compute the difference in observed lengths between the two. From the $\sim$200\,m range photographs at other locations, we estimate uncertainty using the standard deviation in scale factors from line segments common to the 2D images and 3D models. As a conservative estimate, we apply this value to data generated from the $\sim$10\,m range images. To quantify $\rm \delta_3$, we had a non-expert with introductory rock mechanics training retrace the fractures at three outcrops. For $\rm \delta_4$, we assess the extent to which the discontinuity properties depend on the outcrop orientation relative to the joint sets. To get a sense of $\rm \delta_5$, we sampled three outcrops at Glacier 1 with a spacing of $\sim$1 km between them. At all other glaciers, we were only able to sample one outcrop per basin (with the exception of two outcrops at Glacier 13), but we took photographs of numerous outcrops during our helicopter-based reconnaissance. Though these photographs lack an absolute scale, we make a qualitative judgment of the extent to which the sampled outcrop represents other outcrops in the catchment. 
+
+\subsection{Tests of statistical significance}
+
+We perform pairwise comparison tests to determine if there are any significant differences in the discontinuity properties (e.g. $\rm P_{10}$, $\rm P_{20}$, etc.) between groups. Groups are classified on the basis of glacier-type as S vs NS, and catchment lithology as mixed lithology (MX) or solely metasedimentary (MS) yielding MX-S, MS-S, MX-NS and MS-NS groups. Each catchment contains a single glacier. For the MX catchments, the rock type can be felsic plutonic (P) or metasedimentary (MS), and so MX catchments can be further classified as MX(P)-S, MX(MS)-S, MX(P)-NS and MX(MS)-NS. 
+%Groups are classified on the basis of glacier-type (S vs NS), outcrop rock type (P vs. MS) and a combination of glacier-type and catchment lithology (MX-S, MS-S, MX-NS and MS-NS). 
+Given our small sample size, we test the null hypothesis that groups are statistically indistinguishable using the Tukey HSD test ($\alpha = 0.1$), which is a more conservative pairwise comparison test than the standard $t$-test because it accounts for the probability that two groups are different by chance variability \citep{Dowdy2011}. 
+
+\section{Results}
+
+Discontinuity traces at each outcrop can be seen in $\rm 4\,m^2$ windows in Fig. \ref{oc}. While there is a large range in discontinuity properties across all outcrops, we observe that the $\rm P_{21}$ scales linearly with the $\rm P_{10}$ (each with units of $\rm m^{-1}$, with $R^2=0.99$), while the $\rm I_{20}$ scales linearly with the $\rm P_{20}$ (each with units of $\rm m^{-2}$, with $R^2=0.95$). We also observe that the ratio of maximum to minimum frequency (RMMF) increases with the mean $\rm P_{10}$ or $\rm P_{21}$, but the relationship is relatively weak ($R^2=0.56$ for both). For all outcrops, regardless of the scanline angle, we find that the linear intensity ($\rm P_{10})$ and mean trace lengths are distributed log-normally (Fig. \ref{fp}\,b and d). However, the distributions of these metrics are influenced by curtailment of fractures longer than the sampling window and truncation of fractures smaller than can be resolved given the image resolution \citep[e.g.][]{Hudson1979}. It is therefore possible that the fracture spacing and length follow other distributions, such as negative exponential \citep[e.g.][]{Hudson1979} or power law \citep[e.g.][]{Bonnet2001}. Given the positive correlation amongst the various discontinuity properties, we use `bedrock fracture' as a terminology to encompass the various metrics. For example, a high extent of bedrock fracturing is synonymous with relatively high $\rm P_{10}$, $\rm P_{21}$, $\rm P_{20}$ and $\rm I_{20}$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim=0cm 0cm 0cm 0cm, clip=true,width =1\textwidth]{figures/outcrops1.pdf}
+  \caption[]{Bedrock discontinuities traces in red. With the exceptions of Gl 2, Gl 4 and GL 15, these 16\,m$^2$ sections are only portions of the larger window. The scale for the outcrop at Glacier 4 is only approximate.}
+\label{oc}
+\end{figure}
+
+\begin{table}[H]
+%\centering
+\resizebox{\textwidth}{!}{\begin{tabular}{l l r r r r r r r r r r}
+\hline
+
+\bf{Glacier}&\bf{Outcrop}&\bf{Group}& $\rm \bf P_{21}$ & mean $\rm \bf P_{10}$ & min $\rm \bf P_{10}$  & max $\rm \bf P_{10}$ & $\rm \bf P_{20}$ & $\rm \bf I_{20}$ & \bf{Resolution} & \bf{Window size}  \\ 
+&&&$\rm (m^{-1})$&$\rm (m^{-1})$&$\rm (m^{-1})$&$\rm (m^{-1})$&$\rm (m^{-2})$&$\rm (m^{-2})$&$\rm (px\,m^{-1})$&$\rm (m^{2})$ \\\hline
+1 &1& MX(P)-S &6.31&4.00&4.26&3.78&16.47&10.57&145.32&145.63\\\hline
+1&2& MX(P)-S &6.16&3.91&4.27&3.42&12.96&9.89&108.00&405.94\\\hline
+1&3& MX(P)-S &9.43&6.01&7.05&4.96&29.44&18.26&141.00&56.25\\\hline
+1 & mean& &7.30&4.64&5.19&4.05&19.63&12.91&--&--\\\hline
+2&& MS-NS &40.88&26.29&34.21&17.52&359.76&234.77&485.75&1.18\\\hline
+4&& MS-NS &13.09&8.35&10.85&4.63&39.39&26.27&--&26.38\\\hline
+5&& MS-S &5.03&3.23&3.69&2.74&11.26&4.41&239.17&312.92\\\hline
+6&& MS-S  &12.63&7.98&9.90&5.93&60.57&24.16&191.43&59.52\\\hline
+7&& MS-S  &11.70&7.51&8.48&6.11&48.91&32.34&233.18&25.23\\\hline
+8&& MX(MS)-S &8.06&5.15&5.44&4.66&30.82&15.55&252.18&60.76\\\hline
+9&& MS-NS &14.74&9.44&11.59&6.53&75.71&21.41&403.70&44.04\\\hline
+11&& MS-S &13.02&8.23&9.91&6.14&50.87&24.09&399.20&37.19\\\hline
+13&1& MX(P)-S &8.90&5.74&6.96&4.21&27.72&11.65&261.56&45.05\\\hline
+13&2& MX(P)-S &9.18&5.87&7.04&4.28&28.60&11.59&386.80&23.04\\\hline
+13 &mean&  &9.04&5.80&7.00&4.24&28.16&11.62&--&--\\\hline
+14&& MX(MS)-NS &15.08&9.52&11.06&7.56&72.66&36.53&319.40&24.31\\\hline
+15&&MX(MS)-NS & 30.52&19.07&23.62&11.62&287.61&134.45&1018.00&4.06\\\hline
+16&& MX(MS)-NS &16.50&10.38&12.63&7.55&90.63&37.50&400.20&22.13\\\hline
+17&& MX(MS)-S &8.61&5.50&6.42&4.52&28.66&11.90&330.06&90.82\\\hline
+18&& MX(P)-S &8.43&5.41&6.46&3.70&19.58&11.81&330.47&163.99\\\hline
+19&& MX(P)-NS &9.46&6.07&6.75&5.13&35.58&17.41&181.00&118.11\\\hline
+
+\end{tabular}}
+\caption{Results from discontinuity trace data. The group names are coded by glacier catchment lithology, outcrop rock-type, and glacier-type. Catchment lithology is classified as either mixed plutonic and metasedimentary (MX) or solely metasedimentary (MS), outcrop rock-type is either metasedimentary (MS) or mixed (MX) and the glacier-type is either surge-type (S) or non-surge type (NS).}
+\label{tab1}
+\end{table}
+
+
+
+\subsection{Tests of statistical significance}
+
+When comparing the discontinuity properties across groups, we obtain an unexpected result: the outcrops bordering non-surge type glaciers are more fractured than the outcrops bordering surge-type glaciers (Fig. \ref{fig1}). All discontinuity properties yield statistically significant differences between S and NS groups with $p$-values much less than 0.1 (column 1, Table \ref{tab2}). The plutonic rocks tend to be less fractured (although not significant), so to verify that the rock type is not controlling the outcome, we repeat the analysis with the metsedimentary rocks only, and find that there is no overlap between S and NS groups in the $\rm P_{21}-P_{10}$ space (inset of Fig. \ref{fig1}). In our analysis, we exclude results from Glacier 4 (MS-NS) given anomalously high uncertainty in the image resolution. However, our best estimates of discontinuity properties from field evidence and imagery at Glacier 4 shows that the outcrop is highly fractured, which is in qualitative agreement with the results.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim=0cm 0cm 0cm 0cm, clip=true,width =1\textwidth]{figures/P10vsP21.pdf}
+  \caption[]{$\rm P_{21}$ versus $\rm P_{10}$ shown in log-log space to condense the range of observations. Green arrows show the direction that we expect the given value to move based on visual estimates of other outcrops in the catchment, while blue arrows indicate the expected change in value if the outcrop were to be analyzed from a direction perpendicular to the sampling direction. Small arrows qualitatively suggest a slight change while larger arrows suggest a large change. Where symbols are not associated with arrows, the value is estimated to be representative. The bars for the glacier 1 data shows the range of observed values for the three measured outcrops centered on the mean value. The inset shows a reduced dataset without the plutonic rocks for clarity.}
+\label{fig1}
+\end{figure}
+
+While the $\rm P_{10}$, $\rm P_{21}$, $\rm P_{20}$, $\rm I_{20}$ and distribution of trace lengths depend on scale, the shape analysis is scale independent. Like the scale-dependent metrics of damage, the RMMF, AR and RSS are statistically different between the outcrops bordering S glaciers versus those bordering NS glaciers. The greatest difference arises from outcrops within the MS basins, with $p=0.02$ for the MS-NS vs. MS-S groups, suggesting that block shapes from MS-NS outcrops are relatively more elongate. The MS-NS group shows the most elongate block shapes as well as the finest mean grain size distribution (as determined in \cite{Crompton2016}).
+%This result parallels the grain size distribution results from \cite{Crompton2016}, whereby the metasedimentary catchments yield a significant difference between S and NS groups that is not captured by mixed-lithology catchments. The MS-NS group shows the most elongate block shapes as well as the finest mean grain size distribution (as determined in \cite{Crompton2016}). 
+
+\begin{table}
+\begin{tabular}{lrrr}
+\hline
+
+&\textbf{Glacier-type} & \textbf{Rock-type} & \textbf{Glacier-type and} \\
+& & & \textbf{catchment lithology}\\
+\hline
+$\rm{P_{10}\,\,(m^{-1})}$ & 0.01 & 0.19 & 0.12 \\
+$\rm{P_{21}\,\, (m^{-1})}$ & 0.02& 0.19 & 0.12 \\
+$\rm{P_{20}\,\, (m^{-2})}$ &0.02 & 0.21 & 0.22 \\
+$\rm{I_{20} \,\,(m^{-2})}$ & 0.04&0.29 & 0.30 \\
+RMMF & 0.09 & 0.54& 0.29 \\
+\hline
+
+\end{tabular}
+\caption{$p$-values from Tukey HSD test at $\alpha$=0.1 to test that a given metric (rows) yields a significant difference amongst groups (columns). The glacier-type column differentiates outcrops from surge-type versus non-surge type glaciers, the rock-type column differentiates metasedimentary versus plutonic rocks, while glacier-type and lithological class is divided into four groups as MX-S, MX-NS, MS-S and MS-NS.}
+\label{tab2}
+\end{table}
+
+\subsection{Uncertainty}
+
+($\rm \bf \delta_1$) Outcrops at Glaciers 2 and 16 exhibit the highest amount of bedrock damage, but photos from these outcrops were also collected with the highest image resolution. We therefore digitally decrease the resolution of the outcrop image at Glacier 2 by a factor of four then retrace fractures in the same window. In doing so we find that the $\rm P_{21}$ decreases by only 6\%. Further evidence that the measured outcrop damage is not a function of image resolution is given by the low $R^2$ (0.46) between the $\rm P_{21}$ and image resolution ($R^2=0.27$ when excluding outcrops at Glaciers 2 and 16). 
+
+
+($\rm \bf \delta_2$) Where a 3D model was calibrated with known distances at a Glacier 1 outcrop, we compute the error in scale to be 5\%. From the $\rm \sim$200\,m range images at all other glaciers, we conservatively estimate a mean scale error of 20\%. Increasing the $\rm P_{10}$ and $\rm P_{21}$ values from outcrops at surge-type glaciers and decreasing the values from outcrops at non-surge type glaciers by 20\% still yields a significant difference between the S and NS groups at $p<0.1$. To put this result into context, a change greater than 20\% would mean that we would have to uniformly vary the $\rm P_{10}$ ($\rm P_{21}$) by more than $\rm 2.3\,m^{-1}$ ($\rm 1.4\,m^{-1}$) so S versus NS groups are no longer statistically distinguishable. 
+
+($\rm \bf \delta_3$) From having a second person independently trace the discontinuities, we find that traces at two of the outcrops result in a difference in $\rm{P_{10}}$ and $\rm{P_{21}}$ of $5\%$ where damage was relatively unambiguous (outcrops at Glacier 7 and 13), but up to 23\% for an outcrop where the discontinuity tracing was the most challenging (outcrop at Glacier 14). Unlike the $\rm{P_{10}}$ and $\rm{P_{21}}$, we find that the $\rm{I_{20}}$, $\rm{P_{20}}$ and mean trace length are highly dependent on the manual digitization of fractures. We therefore focus on the $\rm{P_{10}}$ and $\rm{P_{21}}$ as indicators of the extent of bedrock fracture. 
+
+($\rm \bf \delta_4$) Our qualitative estimates on the extent to which an outcrop represents a catchment are indicated by the green arrows in Fig. \ref{fig1}. The estimated change in discontinuity properties based on the outcrop orientation relative to the joint sets is shown by the blue arrows in Fig. \ref{fig1}. While some of the estimated changes would decrease the strength of the relationship between the extent of bedrock fracture and glacier-type, we suggest that these changes would not significantly affect the results. 
+
+($\rm \bf \delta_5$) Measurements from three outcrops at Glacier 1 yield standard deviations of $\rm\sigma_{P_{10}} = 1.2\,m^{-1}$ and a $\rm\sigma_{P_{21}} = 0.6\,m^{-1}$, while the measurements from outcrops at all glaciers yield values of $\rm \sigma_{P_{10}} = 6.0\,m^{-1}$ and $\rm \sigma_{P_{21}} = 9.6\,m^{-1}$, indicating that intra-catchment variability is much less than inter-catchment variability. For context, we plot the range in $\rm{P_{10}}$ and $\rm{P_{21}}$ values from Glacier 1 in Fig. \ref{fig1}. 
+
+The largest uncertainties arise from generating scale, from outcrop basin representativeness and from human-to-human variability in tracing. Treated individually, none of these sources of error changes the conclusion. 
+
+\section{Discussion}
+
+%Could the difference in subglacial dynamics between surge-type and non-surge type glaciers be enough to explain the fracture characteristics? Theories of subglacial plucking suggest that differential stresses at the lip of a bedrock step can be high enough to fracture bedrock \citep{Iverson2012,Iverson1991,Cohen2006}, even for strong crystalline rock without macroscopic flaws \cite{Hallet1996}. In reality, plucking tends to exploit the weakness of pre-existing joints (e.g. Hooyer, 2012), although fracture of rock bridges in a joint rock mass may still occur during plucking \cite{Kemeny2003}. However, fractured rock bridges connect planes of rock between existing joint surfaces, and would likely not form sub-parallel joint sets like those observed and traced in outcrop. But in the event that jointing from plucking could significantly control the extent of bedrock damage, we consider the following. In a plucking model by \cite{Hallet1996}, plucking is thought to increase with velocity, and surging could therfore increase the degree of plucking, and help to explain the increased sediment flux from Variegated Glacier during the 1982 surge. This theory cannot explain our observation, because surge-type glaciers overlie less fractured bedrock. On the contrary, coupled hydrology-erosion modelling work by \cite{Beaud2014} does not show an increased plucking rate with basal sliding speed, but instead correlates with effective pressure and hence ice-thickness. It may then be possible that surge-type glaciers are thicker during quiescence and therefore driving greater plucking rates, but we are too limited in our understanding of the differences in effective pressure and ice-thickness between surge-type and non-surge type glaciers to draw any reasonable conclusions. Maybe here you can add something about stick slip from entrainment of basal debris, and it's effect of increasing plucking (zoet) 
+
+We find that surge-type glaciers in our field area are associated with less fractured bedrock than the non-surge type glaciers. In this section, we explore general mechanisms of bedrock fracture in glacierized mountain ranges with a specific focus on processes relevant to the study area. We then discuss the relationship between bedrock fracture and glacier dynamics, and explore various hypotheses for linking the two.
+
+\subsection{Causes of bedrock damage}
+%\textcolor{red}{Bedrock fracture results from geological and topographical factors that are not dependent on glacier-type, or other such variables that might cause an underlying relationship between glacier-type and fracture intensity}
+
+The extent of macroscopic fracture depends on the accumulation of subcritical crack growth, which is a function of time, stress, temperature and water content \citep[e.g.][]{Atkinson1984,Kemeny2003,Molnar2004}. Stress varies with the time dependent path of exhumation, and is the sum of the tectonic, topographic and exhumational stresses  \citep[e.g.][]{Leith2014a}. Although current uplift rates are low in our study area, tectonic stresses may still be high, as evidence of activity along the Duke River and Denali Fault systems \citep{Cobbett2016,Marechal2015}. As a result, bedrock damage in our field area may be ongoing, but it is also possible that the rate of bedrock damage peaked during the post Miocene onset of brittle deformation in the St. Elias Mountains \citep[e.g.][]{Eisbacher1977}. Large scale tectonic stresses alone are often not great enough to cause fracture at the Earth surface \citep{Leith2014a}. Geomorphic stresses that result from differential loading of rock and ice \citep[e.g.][]{Savage1986,Miller1996,Augustinus1995,Kinakin2005,Leith2014a,Molnar2004,Stead2004} can be compounded with residual or locked-in stresses that result from exhumation \citep[e.g.][]{Barrows2008} to control the orientation and density of fractures within the first tens to hundreds of meters of bedrock. Loading and unloading of thick ice during and after the Last Glacial Maximum could have led to increased bedrock damage in our field area \citep[e.g.][]{Eberhardt2004,Gramiger2017,Leith2014}, but the scale at which this occurred would not have been sufficiently heterogeneous to explain the difference in bedrock damage under surge-type versus non-surge type glaciers. 
+%**While valley shape is important for controlling stress concentrations that lead to bedrock fracture, we have not yet investigated a relationship between valley shape and glacier-type. If such a relationship exists, future work should quantify the extent to which differences in valley shape can lead to the observed difference in bedrock damage between the surge-type and non-surge type glaciers in our field area. (omit?)**
+
+The extent of damage can also be controlled by the compressive and tensile rock strength, which has been observed through field investigations of fracture spacing where the bedrock lithology varies on a large enough spatial scale \citep[e.g.][]{Sturzenegger2007}. The term `lithology' is not commensurate with rock strength given the large variation in physical properties within a given mapped lithology, as noted in a study of clast shape versus lithology in glacier systems \citep{Lukas2013}. In our field area, we observe that plutonic rocks are generally less damaged than the metasedimentary rocks, but the difference is not statistically significant. As a result, lithology alone cannot explain variations in bedrock damage, which may help explain why \cite{Clarke1986} find no correlation between surging and bedrock lithology from a map-scale study in the St. Elias Mountains. While bedrock lithology exerts some control on bedrock damage, it may not be a first order control in our field area because the term lithology does not capture rock strength, or the lithology varies on too small of a spatial scale (e.g. the intrusive bodies are too small). Surging has been correlated to bedrock lithology in Svalbard \citep{Hamilton1996,Jiskoot1998}, where the lithology might be the dominant control on bedrock damage.
+
+Within the first few meters of bedrock, freeze-thaw and thermal stress driven by changes in air temperature might cause variations in the extent of bedrock fracture. Similarly, climate may control the thermal regime of a glacier and hence its dynamics, and so variability in micro-climate at the catchment-scale might be a confounding factor. However, the glacier-type appears to be randomly distributed as a function of the mean catchment orientation and outcrop elevation, so the inter-basin climate variability is probably not sufficient to drive such dramatic differences in bedrock damage. Furthermore, from the previous work of \cite{Wilson2013a} and \cite{Wilson2013}, we suggest that the first-order glacier thermal regime is consistent throughout the field area. Based on first-order controls on bedrock damage we conclude that the basin-scale differences in bedrock damage are not caused by contrasting glacier dynamics. Instead, the bedrock damage results from an interplay of tectonic and overburden forces and unresolved lithological controls that vary spatially from basin to basin. 
+
+%Furthermore, it has been shown that the failure-envelope for rocks is independent of lithology if the orientation of stress preferentially exploits pre-existing weakness in the rock, suggesting that the friction of a slip surface is independent of lithology \citep{Byerlee1978}.
+
+%While it is important to consider that the glacier-type may influence the fracture intensity, this direction of causation is unlikely. \cite{Leith2014} show that the presence of hundreds of meters of glacier ice could influence the local stress regime, and therefore cause bedrock to fracture upon unloading. However, the present day thickness of glaciers in our dataset is considerably less, and likely not significantly different between surge-type and non-surge type glaciers. As an alternative explanation, early models of quarrying suggest that the extent of quarrying may increase with sliding velocity \citep{Hallet1996}, and so quarrying might be expected to increase during a surge \citep{Hallet1996,Sharp1994}. 
+%(Enhanced quarrying through stick slip \cite{Zoet2013}, does this fit here?) 
+%However, we do not expect that the fracture of bedrock bridges from quarrying is sufficient to influence the density of the pervasive joint sets being traced in the bedrock outcrops. 
+%\textcolor{red}{Here I try to dismiss a few possible causes of glacier-type on surging}
+
+%We now present a few examples of correlation between bedrock fracture intensity and glacier-type that do not imply causation in either direction. As previously mentioned, vertical loading of steep asymmetric topography may control fracture intensity and thus basin morphology. The basin morphology might also control large scale bedrock roughness or glacier geometry. The work of \cite{Wilbur1988} shows a possible link between glaciers that have relatively broad ablation area and surging, but the glacier geometry might be a response of the surge and not a prerequisite for surging \citep[e.g.][]{Truffer2000}. 
+%We discuss the possibility of bedrock roughness in a later section (maybe?). (discuss of fracture and valley orientation here?) 
+
+%We were not able to adequately characterize the bedrock hardness or the fracture orientation, both of which might relate to the observed fracture intensity. While the fracture orientation may play a role in quarrying (discussed below), we note that glacier orientation in the St. Elias Mountains is not diagnostic of glacier-type, which is especially true for the glaciers in this study. From field observations we observe that spatial heterogeneity in the orientation of dominant fracture sets is controlled by large scale folding of the rocks, but the glaciers tend to be preferentially oriented, and so perhaps there is a correlation between glacier... Rock hardness does not matter for erodibility. 
+
+\subsection{Possible links between bedrock fracture and glacier dynamics}
+
+\subsubsection{Influence of bedrock damage on glacier dynamics from the literature}
+%\textcolor{red}{Observations of ice surface speeds in Ak show a change in dynamics likely associated with bedrock fracture. Without considering till, I suggest why such relationships might exist based on water flow through bedrock fracture and bedrock roughness}
+
+The observation that surge-type glaciers are preferentially located in proximity to the Denali Fault in Alaska \citep{Post1969} has prompted investigations into the relationship between bedrock damage and glacier dynamics. \cite{Turrin2014} speculate that alternations in the bedrock lithology along the length of the Ruth Glacier lead to multi-decadal speed-up events. The speed-up events initiate over sedimentary rock, where joint density is thought to be much greater than over the granite. Under the Bering and Steller Glaciers, a thrust fault places harder metamorphic and volcanic rocks over the more easily erodible Tertiary strata of the downglacier footwall rocks. On the Steller Glacier, this leads to a knick point in the topography that coincides with the location of speed up. The location of surge initiation on the Bering Glacier in 1993-95 \citep{Fatland2002,Roush2003} and 2001-2010 \citep{Turrin2013} is downglacier of the fault contact \citep{Bruhn2010,Turrin2013}. In each of the cases above, the glaciers become more dynamic where the bedrock is inferred to be more fractured, in apparent contradiction to our observations. We now speculate on mechanisms that might link the extent of bedrock fracture to glacier dynamics. 
+
+\cite{Post1969} suggested that the extent of bedrock fracturing might be important for increasing hydraulic conductivity, whether through secondary porosity in the bedrock or the generation of a high permeability till layer. In interbedded sandstone and mudstone with a mean fracture spacing of $\rm <5\,cm$ (comparable to the outcrop with the highest fracture intensity at Glacier 2), \citet{Surrette2008} measure a hydraulic conductivity ($K$) on the order of $\rm 10^{-6}\,m\,s^{-1}$. We use this value as a conservative estimate given that it is on the high end of the observed range in hydraulic conductivity of fractured bedrock \citep{Domenico1998}, with fractured crystalline rock typically on the order of $\rm 10^{-8}\,m\,s^{-1}$ \citep[e.g.]{Singhal2010}. If we assume a cross sectional bedrock area ($A$) that is $\rm10^2\,m$ wide and $\rm 10^3\,m$ deep and a gradient in hydraulic head $\nabla h$ = 0.1, then according the Darcy's law ($Q = -K\,A\,\nabla h$), we compute a flux on the order of  $\rm Q = 10^{-2}\,m^3\,s^{-1}$, which is insignificant in relation to the typical summertime proglacial discharge of $\rm 1\,m^3\,s^{-1}$ for glaciers in our field area (as measured by \cite{Crompton2016}). We therefore propose that fluid flow through fractured bedrock does not influence glacier-type. Although the role of basal water pressure likely plays a fundamental role in surge initiation and termination, we omit further discussion of subglacial hydrology because we have no evidence to suggest that the meltwater supply (including englacial storage as in \citet{Lingle2003}) differs as a function of glacier-type. 
+
+The extent of bedrock fractures likely control the roughness of the bed, but a relationship linking the properties of bedrock asperities to joint spacing and orientation has yet to be established. The bed roughness is important for dictating the basal shear stress \citep{Weertman1957} and the development of a drainage system \citep{Lliboutry1976}, both of which are key components to hard-bedded models of surging \citep[e.g.][]{Fowler1987,Kamb1987}. The bedrock damage likely controls production rates of subglacial till (discussed below), and till is thought to be important for surging \citep[e.g.][]{Harrison2003}. We cannot rule out the possibility that the bedrock fracture characteristics provide a unique roughness that is conducive to surging, and that the generation of till is simply a byproduct of the fracture intensity. A switch from slow to fast sliding could occur based on previously hypothesized hard-bedded surge mechanisms \citep[e.g.][]{Fowler1987,Kamb1987}, but this implies that surging could occur on a hard bed given the appropriate roughness, and to date, no surges have been observed to initiate over a hard bed. 
+
+%In Svalbard, \cite{Dowdeswell1995,Jiskoot1998} find surging to 
+%
+%Similarly, \cite{Cotton2014} infer a structural domains in the subglacial bedrock from ice surface morphology and velocities on the Malaspina glacier. Finally, \cite{Headley2013} find some of the most rapid bedrock exhumation in the St. Elias Mountains under the Seward Ice Field where they infer rapid erosion due to a combination of extensive bedrock damage resulting from motion along the Chugach-St Elias and Contact Faults.
+
+
+\subsubsection{Influence of fractures on quarrying and till production}
+\label{sec:quarry}
+%\textcolor{red}{Fracture orientation and intensity has a large influence on post glacial landforms and quarrying rates, and must therefore be important for till production rates}
+
+The thickness, spatial extent and characteristics of subglacial till depend on numerous glaciological processes such as clast production, comminution, transport and evacuation. Discussions of comminution and transport are beyond the scope of this paper (see \citet{Alley1997} and \citet{Hambrey1999} for a review of the latter), but we elaborate on the clast production rate as a function of discontinuity spacing within the bedrock. There is currently no direct evidence supporting a link between clast production rates and bedrock damage, however there is direct evidence that discontinuity properties give rise to subglacial landforms through quarrying. For example, foliation and jointing control the orientation and size of plucked bedrock cavities and steps \citep{Glasser1998,Krabbendam2011,Hooyer2012,Kelly2014}, and on a larger scale the joint density is correlated to deglaciated valley morphology \citep{Augustinus1995,Augustinus1992,Brook2002,Brook2004,Leith2014}. Numerical modelling \citep{Iverson2012} and observations on deglaciated bedrock \citep{Duhnforth2010} also show that the rate of erosion through quarrying increases with fracture spacing. We therefore suggest that the clast production rate is a byproduct of quarrying and increases with bedrock damage. While it may be unreasonable to assume that clast production and transport rates are uncoupled, we suggest that the formation of a subglacial till layer is more probable where production rates are highest. The implication for our field area is that the highest rates of clast production, and therefore till development, occur under the non-surge type glaciers where the bedrock is more extensively fractured. 
+%It has been long since documented in glacial geomorphology literature that the bedrock morphology in deglaciated areas is largely controlled by structural weaknesses of the bedrock (citation from 30's in Olvmo/Johansson). 
+%For example, the influence of  and on a larger scale the morphology of \emph{roche moutonnees} \citep[e.g.][]{Gordon1981,Rastas1981,Sugden1992,Olvmo2002}, megagrooves \citep[e.g.][]{Krabbendam2011} and areally scoured landscapes \citep[e.g.][]{Gordon1981,Johansson2001}. On yet larger scales, the joint density as applied to the Rock Mass Strength (RMS) is correlated to deglaciated valley morphology, with low broad U-shaped valleys being linked to low RMS rock and deeper valleys associated with a stronger, less damaged bedrock \citep{Augustinus1995,Augustinus1992,Brook2002,Brook2004,Leith2014}. Numerical modelling \citep{Iverson2012} and observations on deglaciated bedrock \citep{Duhnforth2010} also show that the rate of erosion through quarrying increases with fracture intensity. From these examples, we are establishing a correlation between bedrock fracture characteristics and erosion through quarrying. We therefore suggest that till production is a byproduct of quarrying, and should therefore also be correlated to bedrock fracture characteristics, whereby more damaged bedrock leads to higher till production rates. The implication for our field area is that the highest rates of till production are likely under the non-surge type glaciers. 
+
+%The characteristics of jointing not only control landform morphology, but also the rate of erosion through plucking. In a recent model of quarrying, \cite{Iverson2012} uses uniform, normal, random and fractal step sizes to show that the extent of quarrying increases with with bedrock heterogeneity (a proxy for joint spacing). Although we observe fractures that are spaced according to a log-normal distribution, we could similarly infer that where the ice is in contact with bedrock, quarrying rates increase with joint frequency. From field observations of deglacieted bedrock, \cite{Duhnforth2010} also shows that bedrock erosion rates increase with joint frequency, likely due to enhanced quarrying. We should therefore expect the joint density to control the rate at which subglacial debris can be generated, the extent and characteristics of till, and thus the dynamics of basal motion. 
+%\textcolor{red}{Here I show that from glaciological/geomorph evidence, the fracture intensity is important for the rate of quarrying}
+
+%The hypothesis that surge-type glaciers occur proximal to fault shattered valleys in Alaska and Yukon \citep{Post1969}, has driven further research to investigate the relationship between bedrock damage and glacier dynamics in Alaska. \cite{Turrin2014} speculate that multi-decadal speed up events on the Ruth Glacier, Alaska, are a results of contrasting amounts of bedrock damage along the longitudinal profile of the glacier. The speed up events initiate over sedimentary rock, where joint density is thought to be much greater than over granite. Under the Bering and Steller Glaciers, a thrust fault places harder metamorphic and volcanic rocks over the downglacier footwall rocks, which are composed of more easily erodible Teritiary strata. On the Stellar, this leads to a knick point in the topography and a coincident speed up of the glacier. The location of surge initiation on the Bering in 1993-95 \citep{Fatland2002,Roush2003} and 2001-2010 \citep{Turrin2013} is roughly downglacier from the fault contact \citep{Bruhn2010,Turrin2013}. Similarly, \cite{Cotton2014} infer a structural domains in the subglacial bedrock from ice surface morphology and velocities on the Malaspina glacier. Finally, \cite{Headley2013} find some of the most rapid bedrock exhumation in the St. Elias Mountains under the Seward Ice Field where they infer rapid erosion due to extensive bedrock damage resulting from motion along the Chugach-St Elias and Contact Faults. 
+%\textcolor{red}{Here I show how bedrock fracture intensity is important for glacier dynamics}
+
+\subsubsection{Influence of till and glacier dynamics}
+%\textcolor{red}{Till gives rise to fast flow and exciting glacier dynamics. Some believe that till can also give rise to slow flow, and so it can be the switch for slow and fast modes, which is a process that fits with our observations. I then question the validity of this hypothesis.}
+
+The connection between glacier surging and till has been established by the observation of till in the forefield of surging glaciers \citep[e.g.][]{Evans1999,Christoffersen2005,Sobota2016}, through borehole and geophysical observations of the subglacial environment \citep[e.g.][]{Blake1994,Porter1997,Harrison2003,Truffer2000} and the study of basal ice facies of surge-type glaciers \citep{Sharp1994}. Rates of till deformation can alternate between slow and fast modes as described by the plastic Coulomb failure criterion. This behaviour has been applied to conceptual models and explanations of temperate glaciers surges, whereby an increase in the driving stress or a decrease in the effective pressure leads to progressive till failure \citep[e.g.][]{Boulton1979,Clarke1984,Truffer2001,Nolan2003}.
+% with mechanisms coupled to englacial water storage \citep{Lingle2003}, numerical models for thermally controlled surges \citep{Fowler2001} and similarly, the binary response of ice streams to coupled thermo-hydraulic processes (Tulaczyck 2001b, Bougamont 2012). 
+One way that our observations could support this model is that the more extensive fracturing associated with the non-surge type glaciers leads to thicker or more fine grained tills \citep{Crompton2016} that are consistently in a state of failure, and cannot provide adequate resistance during quiescence. The less fractured bedrock of the surge-type glaciers may lead to a more coarse grained till that has the potential to provide resistance to flow during quiescence with a switch to surging upon failure. 
+ 
+%till can provide enough basal shear stress to prevent sufficiently rapid basal motion, and thus cause the development of an ice reservoir during quiescence. 
+
+%Given that glacier surges have not been observed to overly a hard bed, we hypothesize that surge-type glaciers are intermediate on a spectrum of bedrock fracture intensity. The spectrum ranges from highly damaged to intact bedrock with surges occurring in some finite intermediate range. This hypothesis stems from a mix of global scale observations and data from the Donjek Range, and additional data from other mountain ranges would be needed to verify this hypothesis. Furthermore, the influence of bedrock fracture intensity on glacier-type is likely superimposed on a mass balance envelope \citep{Sevestre2015}. The observation that surges do not occur on a hard bed may indicate the need for a soft bed (many citations). Yet, in the forefield of all sampled glaciers, we find extensive till cover, thus the presence of till is not unique to surge-type glaciers in this area\footnote{Boulders and cobbles in the till had all undergone significant amounts of rounding, and a sieve analysis of till samples yielded no significant differences in any choice of grouping}. Given that we expect quarrying to increase with bedrock fracture intensity (see section \ref{sec:quarry}), we therefore infer that more till is being produced under the non-surge type glaciers than the surge-type glaciers. 
+%\textcolor{red}{Here I fit our data into the context of a global scale to suggest that an intermediate fracture intensity lends itself to surges. I then propose that there is a link between fracture intensity and till generation}
+%\textcolor{red}{Field observations and modeling work suggest that till cannot provide the necessary resistance to flow}
+
+Invoking till processes to explain a switch from slow to fast sliding relies on the assumption that a matrix supported till can provide sufficient resistance to basal motion during quiescence. However, we propose that the resistive forces associated with soft bedded deformation are too low for this assumption to hold. Field measurements from subglacial instruments such as ploughmeters and tilt sensors embedded in subglacial sediment have been obtained from surge-type \citep{Blake1994,Fischer1994,Kavanaugh2006,Porter1997,Porter2001,Truffer2000,Truffer2006} and non-surge type glaciers \citep{Fischer2001,Iverson1994,Hooke1997,Mair2003,Iverson2007}. With the exception of data from Bakaninbreen \citep{Porter1997,Porter2001}, these field observations show that till responds strongly to changes in effective pressure, with behavior that does not appear to depend on glacier-type. At sufficiently low effective pressures, decoupling at the ice--till interface results in relaxation and negative strain within the till. At higher effective pressure, but above the yield strength of the till, the sediment deforms pervasively to some calculable depth within the till \citep[e.g.][]{Damsgaard2013,Iverson2001,Tulaczyk2000}, or concentrates slip across a plane \citep[e.g.][]{Iverson1998,Truffer2000}. At yet higher effective pressures, the ultimate strength of the till can be greater than the driving stress, but ploughing of clasts through the till can cause slip, especially when the water pressure builds in front of the ploughing clast \citep{Iverson1999,Iverson2007,Thomason2008,Tulaczyk2001}. This full suite of mechanisms was observed under controlled field conditions at Engabreen \citep{Iverson2007}. We note that dilatent hardening is a mechanism that could increase resistance within overconsolidated tills \citep[e.g.][]{Moore2002}, but is unlikely to provide significant resistance because the diffusivity of till is often too high \citep{Iverson2010} and the overconsolidation generally too low \citep{Tulaczyk2000}. We therefore suggest that the type of till being probed subglacially and analyzed in the lab cannot provide the necessary resistance to flow during quiescence. 
+
+To simplify the problem by only considering till deformation, we can set the basal shear stress to equal the ultimate strength of the till \citep[e.g.][]{Truffer2001} and solve for the flotation fraction ($f$) that validates this equality. For a surface slope of 5$\rm ^o$, an apparent cohesion of 15\,kPa, an ice thickness of 100\,m and an angle of internal friction of 30$\rm ^o$, the till will fail for $f>0.86$. Flotation fractions are likely in excess of this value in the surge reservoir area during quiescence, indicating that the driving stress is likely greater than the shear strength of the till. Therefore, the excess driving stress not being taken up by the till must be accounted for by longitudinal stress gradients, lateral wall stress, or sticky spots on the bed such as bedrock protuberances. %Field observations also show that a significant amount of glacier motion during quiescence results from basal motion \citep{Blake1994}. 
+%Given the range in till properties documented in the literature thus far (diffusivity, angle of internal friction, cohesion and compressibility), till cannot be a local (dynamic) control on sliding. The matrix supported till that we observe seems to respond to sliding speed locally rather than controlling it \citep[e.g.][]{Iverson2007,Porter2001}. (This can only happen if stress is redistributed to sticky spots). Where the bed is weak, sliding must depend on global controls \citep{Cuffey2010}.
+%\textcolor{red}{Here I show that we observe the same behaviour under STG and normal glaciers, whereby processes that arise from till mechanics cannot provide sufficient resistance to flow during quiescence, at least not for the types of till that we observe}
+
+%In an analysis of the suspended sediment grain size distributions within the proglacial streams of the glaciers listed in this study, \cite{Crompton2016} showed that for glaciers solely overlying metasedimentary bedrock, the non-surge type glaciers had a finer mean grain size distribution than their surge-type counterparts, but regardless of bedrock lithology, all surge-type glaciers yielded statistically indistinguishable mean grain size distributions. An analysis of the bedrock fracture intensity alone does not allow us to correlate suspended sediment grain size to bedrock fracture intensity, but it provides support for the hypothesis that an intermediate range of till characteristics is also conducive to surging. \cite{Kulessa2003} carry out slug tests on neighbouring surge-type and non-surge type glaciers in Svalbard, and find that the non-surge type glacier had a lower hydraulic conductivity, which could fit with the observations herein and in \cite{Crompton2016}. 
+%\textcolor{red}{Here I support the link between fracture and till by showing additional evidence that some intermediate till characteristics are responsible for surging.}
+
+%We therefore extend our hypothesis to suggest that bedrock fracture intensity controls the quantity or quality of till in the subglacial environment, which in turn controls the outcome of glacier-type. We now speculate on a mechanistic link between surging and till characteristics.  
+
+
+
+%\textcolor{red}{Here are two mixed till/bedrock hypotheses that do not depend on till to provide resistance}
+%\subsection{Bedrock fracture and roughness}
+%As an alternative hypothesis to till failure, we speculate that bedrock protuberances through the till can provide the necessary resistance to flow during quiescence. 
+
+If isolated pockets of till are already at or above the ultimate strength of the till, and the excess in driving stress is taken up by bedrock protuberances, then a switch to rapid sliding could occur by increasing the till thickness during quiescence until the bed roughness can no longer support the excess basal shear stress. 
+%Instead of  For the non-surge type glaciers, the higher degree of bedrock damage might result in a lower bed roughness or a consistently thicker till that effectively drowns out the roughness. 
+%Large scale bed roughness might encompass overdeepenings, and \cite{Bjornsson2003} suggest a correlation between overdeepenings and surges in Iceland. However, we suggest that overdeepenings are more likely where the bed is more erodible and hence more fractured, which is in disagreement with our data. \textcolor{ForestGreen}{Why then does Gl 1 have an overdeepening while Gl 2 does not?} 
+Based on observations of the basal ice that formed prior to and during the 1982--83 surge of Variegated Glacier, \cite{Sharp1994} infer a change in the extent and characteristics of till throughout the surge cycle. From proglacial suspended sediment concentration and discharge from Glaciers 1--20 \citep{Crompton2016}, we estimate average basin erosion rates on the order of millimeters per year. This is a rough approximation that neglects sediment storage, but is on the right order of magnitude when compared to existing data within the literature \citep[e.g.][]{Hallet1996a}. If erosion/deposition rates were concentrated over 100--1000\,m lengths of glacier, then changes in till thickness on the order of 1\,m are possible over the decadal timescales of quiescence.  
+
+\subsection{A new hypothesis for linking bedrock fracture and glacier dynamics}
+
+%\textcolor{red}{Here is my proposed mechanism: there must be some intermediate zone between till and bedrock where we observe a high degree of basal shear stress}
+
+\subsubsection{The mechanistic link}
+
+In this section we focus our attention to the bed-type and basal processes that can provide resistance to flow during quiescence rather than trying to explain the underlying cause of glacier surges by pinpointing the mechanisms that initiate a surge. We hypothesize the existence of a subglacial transition zone between exposed bedrock upglacier, where quarrying occurs, and a soft bed downglacier (Fig. \ref{gl}). If such a zone exists, it is poorly documented through field and lab studies. We hypothesize that this zone is located at the downglacier end of the surge reservoir area, which is often found in the accumulation zone \citep[e.g.][]{Kamb1985,Stanley1969}, even for thermally controlled surges \citep[e.g][]{Sevestre2015a,Sund2014}. To provide the necessary resistance to flow during quiescence, this zone would have to provide greater drag than purely hard or soft beds. The development of an ice reservoir during quiescence would depend on the extent and position of this transition zone, the gradients in longitudinal and transverse stresses that would arise from a contrast in bed friction up and downglacier, the surface mass balance and the local driving stress. The extent and position of this transition zone should depend on clast production rate and hence the extent of fractures in the bedrock. We hypothesize that this transition zone is either too high in the accumulation area or too limited in extent to initiate and sustain reservoir development for the non-surge type glaciers in our field area (see Fig. \ref{gl}). 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[trim=0cm 20cm 0cm 0cm, clip=true,width =1\textwidth]{figures/glacier.pdf}
+  \caption[]{Conceptual model showing the extent of till expected for a given fracture intensity or density, with the extent of fracturing increasing to the right. We hypothesis that surge-type glaciers can be found within an immediate range of bedrock damage (panel b). The inset shows a hypothesized zone where drag from clast-bed processes is thought to be greater than drag from hard bedded processes upglacier, and greater than drag from a soft bed downglacier. We suggest that the location and extent of this zone are important for the development of an ice reservoir during quiescence. The bottom panels show hypothetical curves of the temporally and laterally averaged basal drag.}
+\label{gl}
+\end{figure}
+
+Resistance to flow within this transition zone could arise from clast--clast, clast--bed, and or clast--ice interactions that lead to high basal shear stress, even at low effective pressures. For example, \cite{Iverson2003} and \cite{Cohen2005} find relatively high \emph{in situ} basal shear stress at low effective pressure for clasts sliding over a smooth granite surface at the base of Engabreen. In a controlled lab experiment, \cite{Zoet2013} measure high basal shear stress for debris-rich ice sliding over sandstone, where the effective pressure could be greater than zero. Such high shear stresses are in contrast to the relatively low shear stresses measured across a range of smooth hard bed conditions at various sliding speeds under controlled lab settings \citep[e.g.][]{Budd1979,Zoet2015,Zoet2016}. 
+
+Within the clast-rich zone, the size distribution of clasts \citep[e.g.][]{Cohen2005} and clast hardness are likely important for dictating the amount of friction, with the bedrock hardness and joint spacing having a probable control on both. We would therefore expect a higher fraction of larger clasts under the surge-type glaciers and thus higher drag. A high resistance to basal motion might also arise from clast--clast friction where the clast concentration is high but a matrix supported till has not yet developed. A conceptualization is shown along the flowline in the inset of Fig. \ref{gl}, but in reality a complex spatial distribution of a hard bed, clasts and till likely exists across the width of the glacier within this zone. Although we contrast hard beds with clast rich beds, basal debris is likely still present above hard beds but in quantities too low to result in excessive drag. 
+%As long as the clast concentration increases downglacier, then so too should the gradient in drag. 
+
+A thorough consideration of the many possible mechanisms that could result in a switch from slow to fast flow are beyond the scope of this paper. However, we suggest that a switch within this zone could occur by reaching a critical shear stress imposed by changes in ice thickness and surface slope, and/or through time varying changes in basal conditions such as water storage volume or clast concentration. \textcolor{red}{Alex suggests omitting this paragraph}
+
+%, and we do not consider the extent to which these mechanisms yield double values sliding laws that result in a hysteresis between driving stress (where $\tau_d = f(H,\theta)$) and sliding speed.
+%
+%\textcolor{red}{This is how failure might occur in an undeveloped till in the intermediate zone}
+%
+%The resistance to flow could stem from many processes in this zone. Clasts embedded within the ice are likely to cause a significant amount of friction on the bedrock, which is a process that has been the subject of several theoretical and experimental studies \citep[e.g.][]{Budd1979,Hallet1981,Hallet1979,Iverson2003,Lee2004,Cohen2005,Byers2012}. The resistance to flow depends on the concentration, size and hardness of clasts, the bed roughness and effective pressure. If clast bedrock friction is the limiting resistance to flow, then flow will be accommodated by ice creep and regelation around clasts, and where clasts are in contact with one another, motion may occur by clast-clast interactions such as rotation, sliding and comminution. If failure occurs where clasts are touching, then it is possible to imagine that clasts within this zone behave somewhat like till, but with a very high angle of internal friction (i.e. $\phi>55^{\circ}$). Failure would then results from an increased driving stress, or a decrease in effective pressure, as proposed by earlier models of till failure during surge initiation. 
+%
+%\textcolor{red}{Failure could also happen by drowning out of clasts, but regardless of failure mechanism, this zone can provide enough resistance to flow.}
+%
+%Water flow in this zone may be similar to that of a macroporous sheet \citep[e.g.][]{Flowers2002}, whereby clasts support a separation between the ice and the bed \citep[][]{Creyts2009}, but in addition, sheet thickness could be a function of the clast production rate. At it's thickest, this sheet can be no larger than the largest block size or bedrock obstacle, with the former being estimated from joint spacing in the bedrock. The volume of water accommodated in this sheet could decrease in time if the creep closure rate of the roof increases as the surge reservoir builds in ice thickness. A decreased volume could possibly facilitate high water pressure, and a reduction to zero effective pressure could significantly reduce clast-bed friction, thereby providing an alternative mechanism for failure. Observations of the basal debris from Variegated Glacier suggest that portions of the bed contained significant amounts of sediment prior to the surge, but that basal ice that formed during or after the surge contained less fine grained material \citep{Sharp1994}. This observation would be consistent with the concept of drowning out clasts, but in this case, basal freeze on was thought to be the dominant mechanism for closure. But regardless of whether this zone fails by some plastic-like deformation of clasts, or by drowning out the clasts, we propose that this zone is critical for providing sufficient resistance to flow. 
+%
+
+%
+%We have proposed a mechanistic link that is consistent with out observations, but through this analysis we have not ruled out the possibility of alternative soft bedded surge mechanisms. We have not considered mechanisms linked to drainage system evolution as a function of canal development or piping, nor have we considered a more general idea of bed roughness or thermal effects. However, it is not clear how any of the above could feasibly explain our observations. 
+%
+%Before diving into a single mechanism, I have created a list of other possible mechanisms based on the following lists of our observations as well as observations from elsewhere. 
+%
+%\textbf{List 1: What do we know about a single surge event or cycle?}
+%\begin{enumerate}
+%\item Pervasively high basal water pressure allowing for basal motion to dominate during a surge
+%\item Evacuation of fines either during or after a surge
+%\item During a surge, hydraulic conductivity is much lower than after a surge (true for Variegated, perhaps not true in Svalbard?)
+%\item Reservoir zone generally somewhere in the mid to upper accumulation area, where ice is observed to be temperate, even for polythermal glacier surges. Exceptions are at Medvezhiy, where the surge initiates in the ablation area below an ice fall, and for tidewater systems like Monacobreen, where the entire lower portion of the glacier will start to surge all at once. 
+%\item Period is largely controlled by mass balance or ice thickness, but exact timing is hard to predict based on meltwater availability
+%\item Surges often start in the late winter / early spring
+%\item Surges can be truncated
+%\item Long wavelength velocity pulses are often observed leading up to and during a surge behind the surge front. 
+%\item Front moves by brittle and ductile deformation, with a rate that is relatively constant as it moves downglacier
+%\item Hysteresis in the sliding speed-ice thickness relationship (double values sliding law)
+%\item Lower conductivity till ahead of the surge front than behind it where a surge was propagating into cold bedded ice (Kulessa, 2003)
+%\end{enumerate}
+%
+%\textbf{List 2: How are STGs different than normal galciers?}
+%\begin{enumerate}
+%\label{STG}
+%\item Longer, larger area, flatter. Note, however, that in Svalbard long glaciers are more likely to surge if they are steep, and in general long glaciers have a higher probability of being flat.
+%\item Fat bottomed hypsometry in Alaska. Direction of causation?
+%\item Relatively more course grained till where bedrock geology is controlled for
+%\item Lower fracture intensity than normal glaciers in the Donjek Range
+%\item More probable within an optimal climate envelope
+%\item Underlain by till at terminus. Till must eventually thin to zero at the head. What happens in the middle?
+%\item Borehole investigation of STG and normal glaciers underlain by till reveal no apparent difference in till behavior between the two system (except perhaps Bakinanbreen, which doesn't seem to respond to water pressure fluctuations in the same way to any of the glacier)
+%\item Glaciers that rest on a hard bed do not build up a surge reservoir. Is this because they lack the mechanism to fail, and so ice diffusion eventually transfers mass out of the reservoir, or because fast flow (either by ice deformation or sliding) precludes the build up of a reservoir? Hard to say, because these glaciers are already in steady state (minus retreat). Why does this matter? because I am wondering if a hard bed can truly provide enough resistance to flow. See resistance versus fracture spacing figure.
+%\label{HB}
+%\end{enumerate}
+%
+%\textbf{List 3: Here are some possibilities to explain our results:}
+%\begin{enumerate}
+%\item \textbf{Fluid flow through fractured bedrock}. Post (1969) states that surges appear to occur near fault shattered valleys. The explanation is that water can flow through the bedrock of STGs, or where highly fractured bedrock is present, perhaps high permeability unconsolidated sediments exist. Post (1969) notes that surges don't seem to happen in other area where the bedrock is highly damaged
+%\item \textbf{Drainage through a soft bed}. Canals. Piping. Modelling work that I did for numerical methods class. I don't know where to take this one.
+%\item \textbf{Drainage through ice channels that depends on the amount of water pressure that the underlying till can buffer.} I'm lost here as well. 
+%\item \textbf{A decrease in grain size with time.} As the permeability decreases, the bed can sustain more widespread and higher basal water pressure. Furthermore, the till should become weaker. Both mechanisms act to bring about failure. This shouldn't matter for fine grained tills, where most of the water flux is at the ice-till interface where hard bedded drainage mechanisms are the norm. 
+%\item \textbf{Bed roughness}. Post (1969) cites Weertman (1964) for noting that bed roughness is likely critical for sliding speed, but dismisses the idea that roughness is important because ``it seems doubtful that a unique surface roughness is the cause of limited distribution if STGs...". But in the event that it is...hard bedded sliding with cavitation can lead to double valued sliding relationships, which may be a function of bed roughness. Perhaps the generation of till is a side effect of the prime bed roughness conditions that result from a given fracture intensity. This one is tough intuitively, but I guess we can't really rule it out yet. I could be wrong, but it seems like basal sliding rates do not increases in the reservoir area over time. If this is true, then cavitation should actually be limited by increased closure rates as the ice thickens. Therefore, obstacles are less likely to be drowned out. However, this process would decrease hydraulic storage, and therefore make it easier to get higher basal water pressures. This is a complex mix of processes that has probably already been modelled 100 times based on Kamb (1987). 
+%\item \textbf{Bed roughness that is drowned out by time varying thickness of till.} But again, can bed roughness provide the necessary resistance to flow? See item \ref{HB} in list 2. 
+%\item \textbf{Increasing till thickness on a ``flat bed" where bed roughness does not matter}. Basal motion that occurs by slip along a failure surface within the till might be limited by the number of slip planes within the till (a possible function of it's thickness). These slip planes generally concentrate near the top of the till, but secular transient water pressure pulses can penetrate to depth. The change in water pressure with depth depends on the history of forcing at the surface, the conductivity of the till, but probably too on the aggradation rate of the till. Can a surge event occur from a process that changes gradually in time?
+%\item \textbf{Coarse grained till has a higher shear strength, and doesn't fail until the ice is sufficiently thick (this seems like the conventional idea)}. Perhaps the coarse drained till allows for some bed deformation and basal slip, but less than a fine grained or thick till. Coarse grained till would allow for more drainage and therefore higher effective pressure more often, which could cause the build up of a reservoir that would eventually lead to widespread failure. But remember, thicker ice generally strengthens till, it's the N that matters. My counter argument to this most intuitive mechanism is that when till is `developed', it gives rise to processes that allow for high amounts of slip. These mechanisms alone probably cannot create sufficient resistance to build a surge reservoir. 
+%\item \textbf{The till production zone.} The rest of this paper.
+%\item \textbf{Thermal} The till is frozen where slip does not occur. Fowler (2001) model is that as the ice gets thick enough and melt starts to occur, deformation in the causes strain heating, more melt, and a melt/water pressure wave that diffuses up and downstream. We don't think that a `fast' surge is initiated where the bed is frozen, and I'm not sure how to put this in the context of our results. If we are thinking about freezing/melt rates, then perhaps we should think about regelation into sediment, which is so largely dependent on the grain size. 
+%\end{enumerate}
+
+%\subsubsection{Global perspectives}
+%\textcolor{red}{To put our results into a global context: surges happen in some intermediate range of damage. We might be able to correlate this with tectonic forces on global stress maps. This might be left as part of the conclusion, because it is such a short section. But is it okay to introduce new material into the conclusion? \textcolor{ForestGreen}{I need to do a lit review here.}}
+
+\subsubsection{The geographical distribution of surge-type and non-surge type glaciers}
+
+Within our field area, we observe that till blankets the forefield of all glaciers regardless of glacier type, and till is observed under ice at the terminus where fluvial incision allows for such observations. Globally, surges have not been observed where the exposed bedrock is free of till. Together, these observations lead us to the hypothesis that non-surge type glaciers exist on beds that are either predominately soft where the bedrock is highly fractured, or on beds that are predominately hard where the bedrock is relatively intact (e.g. Fig. \ref{gl}\,a and c). By this logic, surge-type glaciers should occur within an intermediate range of bedrock damage (Fig. \ref{gl}\,b). As a potentially hard bedded example, surge-type glaciers are not observed in the Southern Coast Mountains, Canada, where the discontinuity spacing within the plutonic rock is much greater than measured herein \citep[e.g.][]{Sturzenegger2011}. 
+%The observation of till under non-surge type glaciers \citep[e.g.][]{Fischer2001,Iverson1994,Mair2003} is not at odds with till occurs too low in the ablation area where an increase in basal friction might not be significant enough to create an ice reservoir because the gradient in ice flux generally decreases towards the terminus, and melt rates might be too high. 
+The relative inactivity of orogenesis in the Southern Coast Mountains \citep{Parrish1983} might help to explain the high fracture spacing, and thus the lack of surge-type glaciers. If the amount of bedrock fracturing in glacierized environments can be linked to present day tectonic stresses, then it may be possible to explain the distribution of surge-type glaciers globally using world stress maps, such as those from \cite{Zoback1992} or \cite{Heidbach2010}. In doing so, one would need to consider the additional constraints of climate \citep{Sevestre2015}. 
+
+%As discussed in section \ref{sec:quarry}, the production rate of till is likely controlled by quarrying rates that depend on the extent of bedrock damage. Higher till production rates might allow for till to develop higher up on the glacier, thus allowing for the possibility of relatively thicker till, and a longer transport path for comminution to create finer grained sediment, as observed in \cite{Crompton2016}. 
+%
+%Clasts within this zone may be interlocking on themselves, and regelated or partially frozen into the basal ice. As shear stress is imparted on the clasts, they may rotate, slide past one another, comminute, be dragged across the bed. Alternatively, enhanced creep or regelation will cause ice to flow around clasts. Clast-bedrock sliding has been the focus of many experimental and theoretical studies developed for sliding and abrasion laws(many citations). Now we would need to show that the friction in such circumstances is higher than ice-bedrock sliding laws.  
+%
+%Numerous processes within this zone might lead to an instability in sliding speed, and here we suggest a few. 
+%
+%\begin{enumerate}
+%\item{ , and have the ability to fail through comminution and clast rotation. While the angle of internal friction is likely highly variable, it is much higher than observed for matrix supported till (i.e. $>55^{\circ}$). Failure might occur }
+%\end{enumerate}
+
+
+%Till samples were collected near or under the ice at the terminus of most glaciers. These samples were useful for verifying subglacial bedrock lithology and for identifying that the till was lodgement and not simply meltout, but there were no significant differences in the grain size distributions of the surge-type and non-surge type glaciers. 
+
+
+\section{Conclusion}
+
+Results from the detailed 2D mapping of geometrical bedrock discontinuity properties at the margins of 16 glaciers in the northern St. Elias Mountains show that the bedrock is more fractured at outcrops bordering non-surge type glaciers than at outcrops bordering surge-type glaciers. We suggest that in mountain ranges that do not contain surge-type glaciers, in conjunction with the mass balance, the extent of fracturing is either too high or too low to provide the adequate conditions for surging behaviour. To provide a mechanistic link between the extent of bedrock fracture and the presence of surge-type glaciers, we hypothesize that a clast-rich till-transition zone is needed to provide the excessive resistance to basal motion during the quiescent period of a surge cycle. We suggest that the extent and location of this zone are key parameters in dictating the outcome of glacier type, and that the extent and location are controlled primarily by the clast production rate, which is likely a function of the discontinuity frequency of the bedrock. 
+
+
+
+%Text here ===>>>
+
+%%
+
+%  Numbered lines in equations:
+%  To add line numbers to lines in equations,
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+
+
+
+%% Enter Figures and Tables near as possible to where they are first mentioned:
+%
+% DO NOT USE \psfrag or \subfigure commands.
+%
+% Figure captions go below the figure.
+% Table titles go above tables;  other caption information
+%  should be placed in last line of the table, using
+% \multicolumn2l{$^a$ This is a table note.}
+%
+%----------------
+% EXAMPLE FIGURE
+%
+% \begin{figure}[h]
+% \centering
+% when using pdflatex, use pdf file:
+% \includegraphics[width=20pc]{figsamp.pdf}
+%
+% when using dvips, use .eps file:
+% \includegraphics[width=20pc]{figsamp.eps}
+%
+% \caption{Short caption}
+% \label{figone}
+%  \end{figure}
+%
+% ---------------
+% EXAMPLE TABLE
+%
+% \begin{table}
+% \caption{Time of the Transition Between Phase 1 and Phase 2$^{a}$}
+% \centering
+% \begin{tabular}{l c}
+% \hline
+%  Run  & Time (min)  \\
+% \hline
+%   $l1$  & 260   \\
+%   $l2$  & 300   \\
+%   $l3$  & 340   \\
+%   $h1$  & 270   \\
+%   $h2$  & 250   \\
+%   $h3$  & 380   \\
+%   $r1$  & 370   \\
+%   $r2$  & 390   \\
+% \hline
+% \multicolumn{2}{l}{$^{a}$Footnote text here.}
+% \end{tabular}
+% \end{table}
+
+%% SIDEWAYS FIGURE and TABLE 
+% AGU prefers the use of {sidewaystable} over {landscapetable} as it causes fewer problems.
+%
+% \begin{sidewaysfigure}
+% \includegraphics[width=20pc]{figsamp}
+% \caption{caption here}
+% \label{newfig}
+% \end{sidewaysfigure}
+% 
+%  \begin{sidewaystable}
+%  \caption{Caption here}
+% \label{tab:signif_gap_clos}
+%  \begin{tabular}{ccc}
+% one&two&three\\
+% four&five&six
+%  \end{tabular}
+%  \end{sidewaystable}
+
+%% If using numbered lines, please surround equations with \begin{linenomath*}...\end{linenomath*}
+%\begin{linenomath*}
+%\begin{equation}
+%y|{f} \sim g(m, \sigma),
+%\end{equation}
+%\end{linenomath*}
+
+%%% End of body of article
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Appendix goes here
+%
+% The \appendix command resets counters and redefines section heads
+%
+% After typing \appendix
+%
+%\section{Here Is Appendix Title}
+% will show
+% A: Here Is Appendix Title
+%
+%\appendix
+%\section{Here is a sample appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Optional Glossary, Notation or Acronym section goes here:
+%
+%%%%%%%%%%%%%%  
+% Glossary is only allowed in Reviews of Geophysics
+%  \begin{glossary}
+%  \term{Term}
+%   Term Definition here
+%  \term{Term}
+%   Term Definition here
+%  \term{Term}
+%   Term Definition here
+%  \end{glossary}
+
+%
+%%%%%%%%%%%%%%
+% Acronyms
+%   \begin{acronyms}
+%   \acro{Acronym}
+%   Definition here
+%   \acro{EMOS}
+%   Ensemble model output statistics 
+%   \acro{ECMWF}
+%   Centre for Medium-Range Weather Forecasts
+%   \end{acronyms}
+
+%
+%%%%%%%%%%%%%%
+% Notation 
+%   \begin{notation}
+%   \notation{$a+b$} Notation Definition here
+%   \notation{$e=mc^2$} 
+%   Equation in German-born physicist Albert Einstein's theory of special
+%  relativity that showed that the increased relativistic mass ($m$) of a
+%  body comes from the energy of motion of the body—that is, its kinetic
+%  energy ($E$)—divided by the speed of light squared ($c^2$).
+%   \end{notation}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  ACKNOWLEDGMENTS
+%
+% The acknowledgments must list:
+%
+% •	All funding sources related to this work from all authors
+%
+% •	Any real or perceived financial conflicts of interests for any
+%	author
+%
+% •	Other affiliations for any author that may be perceived as
+% 	having a conflict of interest with respect to the results of this
+% 	paper.
+%
+% •	A statement that indicates to the reader where the data
+% 	supporting the conclusions can be obtained (for example, in the
+% 	references, tables, supporting information, and other databases).
+%
+% It is also the appropriate place to thank colleagues and other contributors. 
+% AGU does not normally allow dedications.
+
+
+\acknowledgments
+We thank the Kluane First Nation (KFN), Parks Canada, and the Yukon Territorial Government for granting us permission to work in traditional KFN territory and Kluane National Park and Reserve. We are grateful for financial support provided by the Natural Sciences and Engineering Research Council of Canada, the Garfield Weston Foundation of the Association of Canadian Universities for Northern Studies, the Yukon Geological Survey, Simon Fraser University, the Northern Scientific Training Program and the Polar Continental Shelf Project. We kindly acknowledge Trans North Helicopter pilot Dion Parker, and the Arctic Institute of North America's Kluane Lake Research Station for facilitating field logistics. We are grateful to Flavien Beaud and Laurent Mingo for all aspects of field assistance, to Steve Israel for collaboration on bedrock mapping and Neal Iverson for useful discussion about basal drag. 
+
+%% ------------------------------------------------------------------------ %%
+%% Citations
+
+% Please use ONLY \citet and \citep for reference citations.
+% DO NOT use other cite commands (e.g., \cite, \citeyear, \nocite, \citealp, etc.).
+
+
+%% Example \citet and \citep:
+%  ...as shown by \citet{Boug10}, \citet{Buiz07}, \citet{Fra10},
+%  \citet{Ghel00}, and \citet{Leit74}. 
+
+%  ...as shown by \citep{Boug10}, \citep{Buiz07}, \citep{Fra10},
+%  \citep{Ghel00, Leit74}. 
+
+%  ...has been shown \citep [e.g.,][]{Boug10,Buiz07,Fra10}.
+
+
+
+%%  REFERENCE LIST AND TEXT CITATIONS
+%
+% Either type in your references using
+%
+% \begin{thebibliography}{}
+% \bibitem[{\textit{Kobayashi et~al.}}(2003)]{R2013} Kobayashi, T.,
+% Tran, A.~H., Nishijo, H., Ono, T., and Matsumoto, G.  (2003).
+% Contribution of hippocampal place cell activity to learning and
+% formation of goal-directed navigation in rats. \textit{Neuroscience}
+% 117, 1025--1035.
+%
+% \bibitem{}
+% Text
+% \end{thebibliography}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Or, to use BibTeX:
+%
+% Follow these steps
+%
+% 1. Type in \bibliography{<name of your .bib file>} 
+%    Run LaTeX on your LaTeX file.
+%
+% 2. Run BiBTeX on your LaTeX file.
+%
+% 3. Open the new .bbl file containing the reference list and
+%   copy all the contents into your LaTeX file here.
+%
+% 4. Run LaTeX on your new file which will produce the citations.
+%
+% AGU does not want a .bib or a .bbl file. Please copy in the contents of your .bbl file here.
+
+
+%% After you run BibTeX, Copy in the contents of the .bbl file here:
+%\bibstyle{}
+%\bibliographystyle{agufull08.st}
+\bibliography{refs}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Track Changes:
+% To add words, \added{<word added>}
+% To delete words, \deleted{<word deleted>}
+% To replace words, \replace{<word to be replaced>}{<replacement word>}
+% To explain why change was made: \explain{<explanation>} This will put
+% a comment into the right margin.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% At the end of the document, use \listofchanges, which will list the
+% changes and the page and line number where the change was made.
+
+% When final version, \listofchanges will not produce anything,
+% \added{<word or words>} word will be printed, \deleted{<word or words} will take away the word,
+% \replaced{<delete this word>}{<replace with this word>} will print only the replacement word.
+%  In the final version, \explain will not print anything.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%
+%\listofchanges
+%%%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Supporting Information
+%% (Optional) See AGUSuppInfoSamp.tex/pdf for requirements 
+%% for Supporting Information.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%More Information and Advice:
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SECTION HEADS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Capitalize the first letter of each word (except for
+% prepositions, conjunctions, and articles that are
+% three or fewer letters).
+
+% AGU follows standard outline style; therefore, there cannot be a section 1 without
+% a section 2, or a section 2.3.1 without a section 2.3.2.
+% Please make sure your section numbers are balanced.
+% ---------------
+% Level 1 head
+%
+% Use the \section{} command to identify level 1 heads;
+% type the appropriate head wording between the curly
+% brackets, as shown below.
+%
+%An example:
+%\section{Level 1 Head: Introduction}
+%
+% ---------------
+% Level 2 head
+%
+% Use the \subsection{} command to identify level 2 heads.
+%An example:
+%\subsection{Level 2 Head}
+%
+% ---------------
+% Level 3 head
+%
+% Use the \subsubsection{} command to identify level 3 heads
+%An example:
+%\subsubsection{Level 3 Head}
+%
+%---------------
+% Level 4 head
+%
+% Use the \subsubsubsection{} command to identify level 3 heads
+% An example:
+%\subsubsubsection{Level 4 Head} An example.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  IN-TEXT LISTS
+%
+%% ------------------------------------------------------------------------ %%
+%
+% Do not use bulleted lists; enumerated lists are okay.
+% \begin{enumerate}
+% \item
+% \item
+% \item
+% \end{enumerate}
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Single-line equations are centered.
+% Equation arrays will appear left-aligned.
+
+Math coded inside display math mode \[ ...\]
+ will not be numbered, e.g.,:
+ \[ x^2=y^2 + z^2\]
+
+ Math coded inside \begin{equation} and \end{equation} will
+ be automatically numbered, e.g.,:
+ \begin{equation}
+ x^2=y^2 + z^2
+ \end{equation}
+
+
+% To create multiline equations, use the
+% \begin{eqnarray} and \end{eqnarray} environment
+% as demonstrated below.
+\begin{eqnarray}
+  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
+        && + (y - y_{0}) \sin \Theta  \nonumber \\
+  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
+        && + (y - y_{0}) \cos \Theta.
+\end{eqnarray}
+
+%If you don't want an equation number, use the star form:
+%\begin{eqnarray*}...\end{eqnarray*}
+
+% Break each line at a sign of operation
+% (+, -, etc.) if possible, with the sign of operation
+% on the new line.
+
+% Indent second and subsequent lines to align with
+% the first character following the equal sign on the
+% first line.
+
+% Use an \hspace{} command to insert horizontal space
+% into your equation if necessary. Place an appropriate
+% unit of measure between the curly braces, e.g.
+% \hspace{1in}; you may have to experiment to achieve
+% the correct amount of space.
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATION NUMBERING: COUNTER
+%
+%% ------------------------------------------------------------------------ %%
+
+% You may change equation numbering by resetting
+% the equation counter or by explicitly numbering
+% an equation.
+
+% To explicitly number an equation, type \eqnum{}
+% (with the desired number between the brackets)
+% after the \begin{equation} or \begin{eqnarray}
+% command.  The \eqnum{} command will affect only
+% the equation it appears with; LaTeX will number
+% any equations appearing later in the manuscript
+% according to the equation counter.
+%
+
+% If you have a multiline equation that needs only
+% one equation number, use a \nonumber command in
+% front of the double backslashes (\\) as shown in
+% the multiline equation above.
+
+% If you are using line numbers, remember to surround
+% equations with \begin{linenomath*}...\end{linenomath*}
+
+%  To add line numbers to lines in equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+
+
+
